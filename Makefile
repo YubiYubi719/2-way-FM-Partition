@@ -15,10 +15,16 @@ TARGET = Partition
 
 all: $(TARGET)
 
+$(OBJDIR):
+	@mkdir $(OBJDIR)
+
 $(TARGET): main.cpp $(OBJS)
 	$(CXX) $(WARNINGS) $(CXXFLAGS) $(OPTFLAGS) $^ -o $@
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.cpp
+$(OBJDIR)/FM_Partition.o: $(SRCDIR)/FM_Partition.cpp | $(OBJDIR)
+	$(CXX) $(WARNINGS) $(CXXFLAGS) $(OPTFLAGS) -c $< -o $@
+
+$(OBJDIR)/myLinkedList.o: $(SRCDIR)/myLinkedList.cpp | $(OBJDIR)
 	$(CXX) $(WARNINGS) $(CXXFLAGS) $(OPTFLAGS) -c $< -o $@
 
 clean:
