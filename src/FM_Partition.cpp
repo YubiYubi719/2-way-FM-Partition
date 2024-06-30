@@ -4,12 +4,10 @@ void Graph::build(string fileName){
     ifstream input1(fileName);
     input1 >> balanceFactor;
     input1.ignore(2,'\n');
-    // input1.ignore();
     netNum = 0;
     cellNum = INT_MIN;
     string curLine;
     while(getline(input1,curLine,';') && curLine != "\n"){
-        // cout << curLine << '\n';
         set<int> tmpSet; // deal with lots of same cellIDs appear inside one net
         if(curLine[0] == '\n') curLine.erase(0,1);
         while (curLine[0] == ' ') curLine.erase(0,1);
@@ -38,13 +36,11 @@ void Graph::build(string fileName){
         Cell* tmpCell = new Cell;
         cells.push_back(tmpCell);
     }
-    // cells.resize(cellNum, new Cell);
 
     // deal with cells
     ifstream input2(fileName);
     input2 >> balanceFactor;
     input2.ignore(2,'\n');
-    // input2.ignore();
     int curNetID = 0;
     while(getline(input2,curLine,';') && curLine != "\n"){
         set<int> tmpSet;

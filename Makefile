@@ -11,6 +11,9 @@ INCDIR = inc
 SRCS = $(wildcard $(SRCDIR)/*.cpp)
 OBJS = $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRCS))
 
+# testcase file
+CASEDIR = case
+
 TARGET = Partition
 
 all: $(TARGET)
@@ -27,5 +30,8 @@ $(OBJDIR)/FM_Partition.o: $(SRCDIR)/FM_Partition.cpp | $(OBJDIR)
 $(OBJDIR)/myLinkedList.o: $(SRCDIR)/myLinkedList.cpp | $(OBJDIR)
 	$(CXX) $(WARNINGS) $(CXXFLAGS) $(OPTFLAGS) -c $< -o $@
 
+test:
+	./Partition $(CASEDIR)/case3.in case3.out
+
 clean:
-	rm -rf $(OBJDIR) $(TARGET)
+	rm -rf $(OBJDIR) $(TARGET) *.out

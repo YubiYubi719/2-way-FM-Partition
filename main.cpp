@@ -25,7 +25,6 @@ int main(int argc, char* argv[]){
             g.renewBucketList();
             uint64_t end = timeSinceEpochMillisec(); // timer end
             cout << "Current iteration time: " << end - start << " ms\n";
-            // cout << "Current minCutNum = " << g.minCutNum << '\n';
             if(prevMinCutNum == g.minCutNum){
                 consecutiveSameCutTimes++;
                 if(consecutiveSameCutTimes == 1) break;

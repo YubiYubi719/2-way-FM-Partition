@@ -1,3 +1,3 @@
 Execution
 1. make
-2. ./Partition "inputfileName" "outputfileName"
+2. using make test or ./Partition "inputfileName" "outputfileName"
