@@ -13,6 +13,8 @@ OBJS = $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRCS))
 
 # testcase file
 CASEDIR = case
+
+# change here!!
 TESTINPUT = $(CASEDIR)/case1.in
 TESTOUTPUT = case1.out
 
