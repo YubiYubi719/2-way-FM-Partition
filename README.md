@@ -1,7 +1,7 @@
-# Execution
+## Execution
 
 ```makefile
 $ make
-```
+$ make test  # equivalent to ./Partition [inputfile Name] [outputfile Name]
 
-using make test or ./Partition [inputfile Name] [outputfile Name]
+```
