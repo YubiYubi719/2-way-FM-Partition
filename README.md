@@ -1,3 +1,7 @@
-Execution
+# Execution
+
+```makefile
 1. make
-2. using make test or ./Partition "inputfileName" "outputfileName"
+```
+
+using make test or ./Partition [inputfile Name] [outputfile Name]
