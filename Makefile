@@ -13,6 +13,8 @@ OBJS = $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRCS))
 
 # testcase file
 CASEDIR = case
+TESTINPUT = $(CASEDIR)/case1.in
+TESTOUTPUT = case1.out
 
 TARGET = Partition
 
@@ -30,8 +32,11 @@ $(OBJDIR)/FM_Partition.o: $(SRCDIR)/FM_Partition.cpp | $(OBJDIR)
 $(OBJDIR)/myLinkedList.o: $(SRCDIR)/myLinkedList.cpp | $(OBJDIR)
 	$(CXX) $(WARNINGS) $(CXXFLAGS) $(OPTFLAGS) -c $< -o $@
 
-test:
-	./Partition $(CASEDIR)/case3.in case3.out
+run:
+	./Partition $(TESTINPUT) $(TESTOUTPUT)
+
+check:
+	./SolutionChecker $(TESTINPUT) $(TESTOUTPUT)
 
 clean:
 	rm -rf $(OBJDIR) $(TARGET) *.out
