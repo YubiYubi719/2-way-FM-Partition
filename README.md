@@ -10,8 +10,8 @@ $ make run  # equivalent to ./Partition [inputfile Name] [outputfile Name]
 ```
 
 ## SolutionChecker
-You can also use the solution checker provided by TAs.
-Remember to change variables *TESTINPUT* and *TESTOUTPUT* inside Makefile before executing make check
+* You can also use the solution checker provided by TAs.
+* Remember to change variables *TESTINPUT* and *TESTOUTPUT* inside Makefile before executing make check
 
 ```
 
