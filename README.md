@@ -6,7 +6,6 @@ You can see it in Probelm Description.pdf
 ```makefile
 $ make
 $ make run  # equivalent to ./Partition [inputfile Name] [outputfile Name]
-
 ```
 
 ## SolutionChecker
@@ -14,8 +13,6 @@ $ make run  # equivalent to ./Partition [inputfile Name] [outputfile Name]
 * Remember to change variables *TESTINPUT* and *TESTOUTPUT* inside Makefile before executing make check
 
 ```
-
 $ chmod 755 SolutionChecker
 $ make check
-
 ```
